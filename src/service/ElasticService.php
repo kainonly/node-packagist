@@ -8,7 +8,7 @@ use think\Service;
 
 class ElasticService extends Service
 {
-    public function register()
+    public function register(): void
     {
         $this->app->bind('elastic', function () {
             $config = $this->app->config

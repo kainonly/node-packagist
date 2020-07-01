@@ -13,13 +13,13 @@ class ElasticFactory
      * 配置
      * @var array
      */
-    private $options = [];
+    private array $options;
 
     /**
      * 客户端集合
      * @var array
      */
-    private $clients = [];
+    private array $clients;
 
     /**
      * ElasticFactory constructor.
@@ -32,7 +32,7 @@ class ElasticFactory
 
     /**
      * 客户端生产
-     * @param string $option 客户端配置
+     * @param array $option 客户端配置
      * @return Client
      */
     private function factory(array $option): Client
