@@ -2,7 +2,7 @@
   "name": "kain/think-elastic",
   "description": "ThinkPHP Elasticsearch 扩展",
   "require": {
-    "php": ">=7.4.*",
+    "php": ">=7.4.0",
     "topthink/framework": "^6.0.0",
     "elasticsearch/elasticsearch": "^7.2"
   },
