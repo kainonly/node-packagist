@@ -6,6 +6,7 @@ namespace think\elastic\common;
 use Elasticsearch\Client;
 use Elasticsearch\ClientBuilder;
 use InvalidArgumentException;
+use think\facade\Config;
 
 class ElasticFactory
 {
@@ -21,13 +22,15 @@ class ElasticFactory
      */
     private array $clients;
 
+
     /**
      * ElasticFactory constructor.
      * @param array $options
      */
-    public function __construct(array $options)
+    public function __construct(?array $options=null)
     {
-        $this->options = $options;
+        
+        $this->options = $options??Config::get('elasticsearch',[]);
     }
 
     /**

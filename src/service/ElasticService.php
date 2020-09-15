@@ -12,7 +12,7 @@ class ElasticService extends Service
     {
         $this->app->bind('elastic', function () {
             $config = $this->app->config
-                ->get('database.elasticsearch');
+                ->get('elasticsearch');
 
             return new ElasticFactory($config);
         });

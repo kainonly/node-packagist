@@ -1,5 +1,5 @@
 {
-  "name": "kain/think-elastic",
+  "name": "liuwave/think-elastic",
   "description": "ThinkPHP Elasticsearch 扩展",
   "require": {
     "php": ">=7.4.0",
@@ -23,18 +23,17 @@
     "think": {
       "services": [
         "think\\elastic\\service\\ElasticService"
-      ]
+      ],
+      "config": {
+        "elasticsearch": "src/config.php"
+      }
     }
   },
   "authors": [
     {
-      "name": "kain",
-      "email": "zhangtqx@vip.qq.com"
+      "name": "liuwave",
+      "email": "liuwave@qq.com"
     }
   ],
-  "support": {
-    "docs": "https://think-bit.kainonly.com",
-    "email": "zhangtqx@vip.qq.com"
-  },
   "license": "MIT"
 }
