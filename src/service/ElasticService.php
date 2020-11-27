@@ -10,7 +10,7 @@ class ElasticService extends Service
 {
     public function register(): void
     {
-        $this->app->bind('elastic', function () {
+        $this->app->bind('elasticsearch', function () {
             $config = $this->app->config
                 ->get('database.elasticsearch');
 

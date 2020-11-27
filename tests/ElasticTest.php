@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace ElasticTests;
 
-use Tests\BaseTest;
 use think\elastic\common\ElasticFactory;
 use think\elastic\service\ElasticService;
 
@@ -18,10 +17,10 @@ class ElasticTest extends BaseTest
     {
         parent::setUp();
         $this->app->register(ElasticService::class);
-        $this->elastic = $this->app->get('elastic');
+        $this->elastic = $this->app->get('elasticsearch');
     }
 
-    public function testIndex()
+    public function testIndex(): void
     {
         $response = $this->elastic->client()->index([
             'index' => 'test',
@@ -31,17 +30,17 @@ class ElasticTest extends BaseTest
                 'value' => 1
             ]
         ]);
-        $this->assertNotEmpty($response);
-        $this->assertEquals(1, $response['_shards']['successful']);
+        self::assertNotEmpty($response);
+        self::assertEquals(1, $response['_shards']['successful']);
     }
 
-    public function testDelete()
+    public function testDelete(): void
     {
         $response = $this->elastic->client()->delete([
             'index' => 'test',
             'id' => 'one'
         ]);
-        $this->assertNotEmpty($response);
-        $this->assertEquals(1, $response['_shards']['successful']);
+        self::assertNotEmpty($response);
+        self::assertEquals(1, $response['_shards']['successful']);
     }
 }
