@@ -1,7 +1,7 @@
 <?php
 declare (strict_types=1);
 
-namespace think\elastic\common;
+namespace think\elastic;
 
 use Elasticsearch\Client;
 use Elasticsearch\ClientBuilder;

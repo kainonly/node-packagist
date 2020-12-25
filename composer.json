@@ -16,13 +16,13 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "ElasticTests\\": "library/think-elastic/tests/"
+      "ElasticTests\\": "tests/"
     }
   },
   "extra": {
     "think": {
       "services": [
-        "think\\elastic\\service\\ElasticService"
+        "think\\elastic\\ElasticService"
       ]
     }
   },

@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace ElasticTests;
 
-use think\elastic\common\ElasticFactory;
-use think\elastic\service\ElasticService;
+use think\elastic\ElasticFactory;
+use think\elastic\ElasticService;
 
 class ElasticTest extends BaseTest
 {
